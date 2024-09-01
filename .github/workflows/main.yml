@@ -29,10 +29,10 @@ jobs:
 
       - name: Build executable with PyInstaller
         run: |
-          pyinstaller --onefile --name=mian mian.py  # 使用 PyInstaller 打包 mian.py
+          pyinstaller --onefile --name=main main.py  # 使用 PyInstaller 打包 mian.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: Executable
-          path: dist/mian.exe  # 打包后的可执行文件路径
+          path: dist/main.exe  # 打包后的可执行文件路径
